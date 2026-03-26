@@ -80,8 +80,7 @@ Datos incorrectos en CSV
 
 Esto evita que la aplicación se cierre inesperadamente.
 ---
-## 🗺️ Diagrama de flujo
-Aplicar conocimientos en:
+
 
 Programación en Python
 Estructuras de datos

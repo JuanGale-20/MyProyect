@@ -1,65 +1,91 @@
-## 📦 Sistema Pro de Inventario con Persistencia (CSV)
+## 🛒 Sistema de Inventario
 ---
-Este proyecto es una solución modular en Python que permite la gestión completa de productos (CRUD), el análisis de estadísticas de negocio y la persistencia de datos mediante archivos CSV. Se enfoca en el uso avanzado de colecciones (listas, diccionarios, tuplas), programación modular y manejo robusto de excepciones.
+📌 Descripción
 ---
-## 🎯 Objetivos de la Historia de Usuario
+Este proyecto consiste en un sistema de gestión de inventario desarrollado en Python. Permite administrar productos mediante operaciones CRUD (Crear, Leer, Actualizar y Eliminar), así como guardar y cargar información utilizando archivos CSV.
 ---
-Persistencia de Datos: Guardar y cargar el inventario desde archivos externos para conservar la información entre sesiones.
-Arquitectura Modular: Organizar el código en módulos especializados (app.py, servicios.py, archivos.py).
-Análisis de Negocio: Generar métricas automáticas sobre el valor y volumen del inventario.
-Robustez: Implementar validaciones críticas para prevenir cierres inesperados por datos corruptos o entradas inválidas.
+## ⚙️ Características principales
 ---
-## 📝 Descripción de Tareas (Tasks)
+Agregar productos
+Mostrar inventario
+Buscar productos
+Actualizar información
+Eliminar productos
+Calcular estadísticas
+Guardar datos en archivos CSV
+Cargar datos desde archivos CSV
+Validaciones de entrada
+Manejo de errores
 ---
-🔹 Task 1: Arquitectura y Flujo
-Diseño del diagrama de flujo integral que abarca desde el menú principal hasta los subflujos de persistencia (Guardado/Carga con validación).
+## 🧱 Estructura del proyecto
 ---
-🔹 Task 2: Estructura de Datos y CRUD Modular
-Uso de una lista de diccionarios para representar productos: {"nombre": str, "precio": float, "cantidad": int}.
-Creación del módulo servicios.py con funciones documentadas (Docstrings) para:
-agregar_producto(), mostrar_inventario(), buscar_producto(), actualizar_producto() y eliminar_producto().
+El proyecto está organizado en módulos:
 ---
-🔹 Task 3: Motor de Estadísticas
-Implementación de calcular_estadisticas() para obtener:
-Unidades totales y valor total del inventario.
-Identificación del producto más caro y el de mayor stock.
-Opcional: Uso de funciones lambda para el cálculo de subtotales.
+app.py → Maneja el menú principal
+servicios.py → Contiene la lógica del CRUD y estadísticas
+archivos.py → Gestiona archivos CSV
+README.md → Documentación
 ---
-🔹 Task 4: Persistencia de Salida (Guardar CSV)
-Desarrollo de guardar_csv() en el módulo archivos.py.
-Validación de inventario vacío y manejo de errores de permisos de escritura mediante try/except.
+## 📊 Estadísticas del inventario
 ---
-🔹 Task 5: Persistencia de Entrada (Cargar CSV)
-Implementación de cargar_csv() con reglas estrictas:
-Validación de encabezados y tipos de datos numéricos no negativos.
-Gestión de errores: Conteo de filas inválidas omitidas sin interrumpir el programa.
-Lógica de Fusión: Opción de sobrescribir el inventario actual o fusionar datos existentes por nombre de producto.
+El sistema calcula automáticamente:
 ---
-🔹 Task 6: Interfaz de Usuario y Experiencia (UX)
-Menú principal interactivo con 9 opciones.
-Ciclo de vida infinito (while) hasta que el usuario decida salir.
-Validación exhaustiva de todas las entradas del usuario para garantizar la estabilidad del sistema.
+Total de unidades disponibles
+Valor total del inventario
+Producto con mayor precio
+Producto con mayor cantidad en stock
 ---
-✅ Criterios de Aceptación
-💾 Persistencia y Datos
+##💾 Guardar CSV
 ---
-Generación de archivos CSV con formato estándar: nombre,precio,cantidad.
-Capacidad de recuperación de datos con reporte de errores en archivos corruptos.
-Uso correcto de listas de diccionarios y modularización en múltiples archivos.
+Guarda el inventario en formato CSV
+Incluye encabezados estándar
+Verifica que el inventario no esté vacío
+Maneja errores de escritura
 ---
-## 📊 Análisis e Interfaz
-Cálculo preciso de métricas de valor y stock.
-Menú funcional (1-9) con mensajes claros para éxito, error e inventario vacío.
+## 📂 Cargar CSV
 ---
-## 🛠️ Calidad de Código
+Permite cargar datos desde un archivo CSV
+Valida el formato del archivo
+Omite filas inválidas
+Permite sobrescribir o fusionar el inventario
+
+En caso de fusión:
+
+Se suman cantidades si el producto ya existe
+Se actualiza el precio si hay diferencias
 ---
-Uso de Docstrings y comentarios técnicos.
-Manejo profesional de excepciones (FileNotFoundError, ValueError, etc.).
-Entrega de documentación visual (Diagrama de flujo).
+## 🖥️ Menú principal
 ---
-## 🚀 Stack Tecnológico
+
+El sistema funciona con un menú interactivo que incluye:
+
+Agregar producto
+Mostrar inventario
+Buscar producto
+Actualizar producto
+Eliminar producto
+Ver estadísticas
+Guardar CSV
+Cargar CSV
+Salir
 ---
-Lenguaje: Python 3.x
-Módulos Core: csv, os, sys
-Paradigma: Programación Modular
+## 🧠 Manejo de errores
 ---
+El sistema controla errores como:
+
+Entradas inválidas
+Archivos inexistentes
+Errores de lectura o escritura
+Datos incorrectos en CSV
+
+Esto evita que la aplicación se cierre inesperadamente.
+---
+## 🗺️ Diagrama de flujo
+Aplicar conocimientos en:
+
+Programación en Python
+Estructuras de datos
+Modularización
+Manejo de archivos
+Validación de datos
+Manejo de excepciones

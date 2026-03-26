@@ -1,3 +1,4 @@
+
 inventario = []
 controlador = 0
 

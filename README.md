@@ -1,11 +1,11 @@
 ## 🛒 Sistema de Inventario
 ---
-📌 Descripción
----
+## 📌 Descripción
+
 Este proyecto consiste en un sistema de gestión de inventario desarrollado en Python. Permite administrar productos mediante operaciones CRUD (Crear, Leer, Actualizar y Eliminar), así como guardar y cargar información utilizando archivos CSV.
 ---
 ## ⚙️ Características principales
----
+
 Agregar productos
 Mostrar inventario
 Buscar productos
@@ -18,32 +18,32 @@ Validaciones de entrada
 Manejo de errores
 ---
 ## 🧱 Estructura del proyecto
----
+
 El proyecto está organizado en módulos:
----
+
 app.py → Maneja el menú principal
 servicios.py → Contiene la lógica del CRUD y estadísticas
 archivos.py → Gestiona archivos CSV
 README.md → Documentación
 ---
 ## 📊 Estadísticas del inventario
----
+
 El sistema calcula automáticamente:
----
+
 Total de unidades disponibles
 Valor total del inventario
 Producto con mayor precio
 Producto con mayor cantidad en stock
 ---
-##💾 Guardar CSV
----
+## 💾 Guardar CSV
+
 Guarda el inventario en formato CSV
 Incluye encabezados estándar
 Verifica que el inventario no esté vacío
 Maneja errores de escritura
 ---
 ## 📂 Cargar CSV
----
+
 Permite cargar datos desde un archivo CSV
 Valida el formato del archivo
 Omite filas inválidas
@@ -55,7 +55,7 @@ Se suman cantidades si el producto ya existe
 Se actualiza el precio si hay diferencias
 ---
 ## 🖥️ Menú principal
----
+
 
 El sistema funciona con un menú interactivo que incluye:
 
@@ -70,7 +70,7 @@ Cargar CSV
 Salir
 ---
 ## 🧠 Manejo de errores
----
+
 El sistema controla errores como:
 
 Entradas inválidas
